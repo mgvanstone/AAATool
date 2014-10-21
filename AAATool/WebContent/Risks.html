@@ -321,6 +321,7 @@
                                             <th>Impact</th>
                                             <th>Likelihood</th>
                                             <th>Findings</th>
+                                            <th>Review Area</th>
                                             <th>Edit/Del</th>                                            
                                         </tr>
                                     </thead>
@@ -332,6 +333,7 @@
                                             <th>Medium</th>
                                             <th>Medium</th>                                                                                                                                                                                
                                             <td><a>1</a>, <a>2</a></td>
+                                            <th>Architecture & Design</th>
                                             <td><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></td>                                                                                                                                                                                
                                         </tr>
                                         <tr>
@@ -341,6 +343,7 @@
                                             <th>High</th>
                                             <th>High</th> 
                                             <td><a>1</a>, <a>2</a></td>
+                                            <th>Operations & Monitoring</th>
                                             <td><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></td>                                             
                                         </tr>
                                     </tbody>
@@ -410,6 +413,18 @@
 								<option value="medium">Medium</option>
 								<option value="low">Low</option>
 							</select>
+						</div>
+						<div class="form-group">
+							<label for="appName">Review Area</label> <select name="reviewArea"
+								class="form-control" id="region">
+								<option value="a&d">Architecture & Design</option>
+								<option value="c&p">Capacity & Performance</option>
+								<option value="cm&g">Change Management & Governance</option>
+								<option value="c&c">Configuration & Currency</option>
+								<option value="o&m">Operations & Monitoring</option>
+								<option value="ts">Technology Solutions</option>
+								<option value="u">Usage</option>
+							</select>	
 						</div>	
 						<div class="form-group">
 							<label for="appName">Related Findings</label> <select name="relatedFindings" multiple="multiple"
