@@ -371,7 +371,7 @@
 					<!-- /.panel-heading -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<i class="fa fa-bar-chart-o fa-fw"></i> AAA Progress against Plan - Appications with completed findings
+							<i class="fa fa-line-chart-o fa-fw"></i> AAA Progress against Plan - Appications with completed findings
 							<div class="pull-right">
 								<div class="btn-group">
 									<button type="button"
@@ -392,6 +392,15 @@
 						</div>
 						<!-- /.panel-body -->
 					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-line-chart-o fa-fw"></i> Burndown Chart						
+						</div>
+						<div class="panel-body">
+							<div id="burndownchart"></div>
+						</div>
+						<!-- /.panel-body -->
+					</div>					
 					<!-- /.panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -629,7 +638,7 @@
 			ykeys : [ 'a' ],
 			labels : [ 'Type' ]
 		});
-		Morris.Bar({
+		Morris.Line({
 			  element: 'interview-progress-against-plan',
 				data : [ {
 					w : '2014-10-06',
@@ -638,15 +647,15 @@
 				}, {
 					w : '2014-10-13',
 					a : 3,
-					b : 3
+					b : 2
 				}, {
 					w : '2014-10-20',
 					a : 6,
-					b : 7
+					b : 4
 				}, {
 					w : '2014-10-27',
 					a : 12,
-					b : 11
+					b : 10
 				}, {
 					w : '2014-11-03',
 					a : 14,
@@ -654,42 +663,46 @@
 				}, {
 					w : '2014-11-10',
 					a : 16,
-					b : 16
+					b : 14
 				} ],
 			  xkey: 'w',
 			  ykeys: ['a', 'b'],
-			  labels: ['Planned Findings Completed', 'Actual Findings Completed']
+			  labels: ['Planned Findings Completed', 'Actual Findings Completed'],
+			  lineColors : [ 'Green', 'Red'],
+			  smooth : false			
 			});
-		Morris.Bar({
-			  element: 'interview-progress-against-plan2',
+		Morris.Line({
+			  element: 'burndownchart',
 				data : [ {
 					w : '2014-10-06',
-					a : 0,
-					b : 0
+					a : 50,
+					b : 50
 				}, {
 					w : '2014-10-13',
-					a : 0,
-					b : 0
+					a : 40,
+					b : 42
 				}, {
 					w : '2014-10-20',
-					a : 6,
-					b : 7
+					a : 30,
+					b : 34
 				}, {
 					w : '2014-10-27',
-					a : 12,
-					b : 11
+					a : 20,
+					b : 25
 				}, {
 					w : '2014-11-03',
-					a : 11,
-					b : 13
+					a : 10,
+					b : 11
 				}, {
 					w : '2014-11-10',
-					a : 16,
-					b : 16
+					a : 0,
+					b : 5
 				} ],
 			  xkey: 'w',
 			  ykeys: ['a', 'b'],
-			  labels: ['Planned Risks Completed', 'Actual Risks Completed']
+			  labels: ['Estimated Days remaining', 'Actual Days Remaining'],
+   			  lineColors : [ 'Green', 'Red'],
+			  smooth : false			  
 			});		
 	</script>
 </body>
