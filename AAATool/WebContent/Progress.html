@@ -256,7 +256,7 @@
 						<li><a href="Apps.html"><i class="fa fa-sitemap fa-fw"></i>
 								Applications</a></li>
 						<li><a href="Progress.html"><i class="fa fa-list fa-fw"></i>
-								Progress</a></li>									
+								Progress</a></li>
 					</ul>
 				</div>
 				<!-- /.sidebar-collapse -->
@@ -286,105 +286,81 @@
 										<tr>
 											<th>Application</th>
 											<th>Region</th>
-											<th>Is Overdue?</th>												
+											<th>Is Overdue?</th>
 											<th>Planned Findings Completion Date</th>
-											<th>Replanned Findings Completion Date</th>												
-											<th>Are findings completed?</th>										
+											<th>Replanned Findings Completion Date</th>
+											<th>Are findings completed?</th>
 											<th>Planned Risks Completion Date</th>
-											<th>Replanned Findings Completion Date</th>											
+											<th>Replanned Findings Completion Date</th>
 											<th>Are risks completed?</th>
-											<th>Edit</th>																						
+											<th>Edit</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>FX Trading App</td>
 											<td>EMEA</td>
-											<td align="center">
-												No
-											</td>											
+											<td align="center">No</td>
 											<td>10-Oct-2014</td>
 											<td>9-Oct-2014</td>
-											<td align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
 											<td>12-Oct-2014</td>
 											<td>11-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>	
-											<td><i class="fa fa-pencil-square-o"></i></td>	
-										</tr>										
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
+											<td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i></td>
+										</tr>
 										<tr>
 											<td>FI Trading App</td>
 											<td>EMEA</td>
-											<td  align="center">
-												Yes
-											</td>											
+											<td align="center">Yes</td>
 											<td>12-Oct-2014</td>
-											<td>17-Oct-2014</td>												
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>
+											<td>17-Oct-2014</td>
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
 											<td>12-Oct-2014</td>
 											<td>19-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" readonly="readonly">
-											    </label>											
-											</td>
-											<td><i class="fa fa-pencil-square-o"></i></td>
+											<td align="center"><label> <input
+													type="checkbox" readonly="readonly">
+											</label></td>
+											<td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i></td>
 										</tr>
 										<tr>
 											<td>Risk App</td>
 											<td>EMEA</td>
-											<td   align="center">
-												Yes
-											</td>												
+											<td align="center">Yes</td>
 											<td>10-Oct-2014</td>
 											<td>17-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
 											<td>12-Oct-2014</td>
 											<td>19-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" readonly="readonly">
-											    </label>											
-											</td>
-											<td><i class="fa fa-pencil-square-o"></i></td>
+											<td align="center"><label> <input
+													type="checkbox" readonly="readonly">
+											</label></td>
+											<td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i></td>
 										</tr>
 										<tr>
 											<td>Backoffice App</td>
 											<td>EMEA</td>
-											<td   align="center">
-												No
-											</td>												
+											<td align="center">No</td>
 											<td>10-Oct-2014</td>
 											<td>10-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
 											<td>12-Oct-2014</td>
 											<td>12-Oct-2014</td>
-											<td  align="center">
-											    <label>
-											      <input type="checkbox" checked readonly="readonly">
-											    </label>											
-											</td>
-											<td><i class="fa fa-pencil-square-o"></i></td>
-										</tr>										
+											<td align="center"><label> <input
+													type="checkbox" checked readonly="readonly">
+											</label></td>
+											<td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i></td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -414,35 +390,37 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">Add Application</h4>
+					<h4 class="modal-title" id="myModalLabel">Update Application
+						Status</h4>
 				</div>
 				<div class="modal-body">
 					<form role="form">
 						<div class="form-group">
-							<label for="appName">Application name</label> <input type="email"
-								class="form-control" id="appName"
-								placeholder="Enter application name">
+							<label for="appName">Application name:</label> <label for="appName">FX Trading</label>
 						</div>
-						<div class="form-group">
-							<label for="appName">Region</label> <select name="region"
-								class="form-control" id="region">
-								<option value="EMEA">EMEA</option>
-								<option value="Americas">Americas</option>
-								<option value="Asia">Asia</option>
-								<option value="Global">Global</option>
-							</select>
+						<div>
+							<label for="appName">Is Overdue?</label> <input type="checkbox">
 						</div>
-						<div class="form-group">
-							<label for="appName">Related Findings</label> <select name="relatedFindings" multiple="multiple"
-								class="form-control" id="region">
-								<option value="f1">None</option>								
-								<option value="f1">Finding 1</option>
-								<option value="f2">Finding 2</option>
-								<option value="f3">Finding 3</option>
-							</select>
+						<div>
+							<label for="appName">Planned Findings Completion Date</label> <input type="date">
+						</div>
+						<div>
+							<label for="appName">Replanned Findings Completion Date</label><input type="date">
+						</div>	
+						<div>
+							<label for="appName">Are findings completed?</label> <input type="checkbox">
+						</div>
+						<div>
+							<label for="appName">Planned Risks Completion Date</label><input type="date">
+						</div>
+						<div>
+							<label for="appName">Replanned Risks Completion Date</label> <input type="date">
 						</div>						
-						<button type="submit" class="btn btn-default">Save</button>
-						<button type="submit" class="btn btn-default">Cancel</button>							
+						<div>
+							<label for="appName">Are risks completed?</label> <input type="checkbox">
+						</div>
+						<button type="submit" class="btn btn-primary">Save</button>
+						<button type="submit" class="btn btn-default">Cancel</button>
 					</form>
 				</div>
 			</div>

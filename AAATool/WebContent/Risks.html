@@ -318,10 +318,10 @@
                                             <th>#</th>
                                             <th>Risk Type</th>
                                             <th>Risk Summary</th>
-                                            <th>Impact</th>
+                                            <th width="15%">Review Area</th>                                                 
+                                            <th>Impact</th>                                        
                                             <th>Likelihood</th>
                                             <th>Findings</th>
-                                            <th>Review Area</th>
                                             <th>Edit/Del</th>                                            
                                         </tr>
                                     </thead>
@@ -329,22 +329,62 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Resiliance</td>
-                                            <td>Production servers for Application X are running on hardware for which spares are not held. Hardware failure would cause application to lose resiliency as it will be on a SPOF whilst spares are ordered and the host repaired</td>
-                                            <th>Medium</th>
-                                            <th>Medium</th>                                                                                                                                                                                
+                                            <td>Production servers for FX Trading Application are running on hardware for which spares are not held. Hardware failure would cause application to lose resiliency as it will be on a SPOF whilst spares are ordered and the host repaired</td>
+                                            <td>Architecture & Design</td>                                            
+                                            <td><button type="button" class="btn btn-warning btn-sm btn-block">Medium</button></td>
+                                            <td><button type="button" class="btn btn-warning btn-sm btn-block">Medium</button></td>                                                                                                                                                                                
                                             <td><a>1</a>, <a>2</a></td>
-                                            <th>Architecture & Design</th>
-                                            <td><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></td>                                                                                                                                                                                
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                                                                                                                                                                
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>Resiliance</td>
-                                            <td>Application X is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
-                                            <th>High</th>
-                                            <th>High</th> 
+                                            <td>FX Trading is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
+                                            <td>Operations & Monitoring</td>                                            
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>                                               
                                             <td><a>1</a>, <a>2</a></td>
-                                            <th>Operations & Monitoring</th>
-                                            <td><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></td>                                             
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                             
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Resiliance</td>
+                                            <td>Risk Management System is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
+                                            <td>Operations & Monitoring</td>                                            
+                                            <td><button type="button" class="btn btn-warning btn-sm btn-block">Medium</button></td>
+                                            <td><button type="button" class="btn btn-danger btn-sm btn-block">High</button></td>                                               
+                                            <td><a>1</a>, <a>2</a></td>
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                             
+                                        </tr>   
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Operations</td>
+                                            <td>FX Trading is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
+                                            <td>Operations & Monitoring</td>                                            
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>                                               
+                                            <td><a>1</a>, <a>2</a></td>
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                             
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Operations</td>
+                                            <td>FX Trading is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
+                                            <td>Operations & Monitoring</td>                                            
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>                                               
+                                            <td><a>1</a>, <a>2</a></td>
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                             
+                                        </tr>       
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Operations</td>
+                                            <td>FX Trading is running at near capacity. The forecast increase in input data rates will mean delays or data loss will begin to occur within three months.</td>
+                                            <td>Operations & Monitoring</td>                                            
+                                            <td><button type="button" class="btn btn-warning  btn-sm btn-block">Medium</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm btn-block">Low</button></td>                                               
+                                            <td><a>1</a>, <a>2</a></td>
+                                            <td><i class="fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal"></i><i class="fa fa-times"></i></td>                                             
                                         </tr>
                                     </tbody>
                                 </table>
@@ -358,7 +398,7 @@
             </div>  
             <div class="row">
                 <div class="col-lg-12">         	
-					<button type="button" class="btn btn-default btn-lg"
+					<button type="button" class="btn btn-primary btn-lg"
 						data-toggle="modal" data-target="#myModal">Add
 						Risk</button>
 					<button type="button" class="btn btn-default btn-lg">
